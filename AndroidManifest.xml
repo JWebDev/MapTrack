@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.ai.mi.maptrack"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="com.google.android.maps"/>
+
+        <activity
+            android:name=".activities.StartMenuActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <activity -->
+        <!-- android:name="de.ai.mi.maptrack.activities.StartMenuActivity"> -->
+        <!-- </activity> -->
+        <activity android:name=".activities.SplshActivity" >
+        </activity>
+        <activity android:name=".activities.TravelDescriptionActivity" >
+        </activity>
+		<activity android:name=".activities.TravelMapActivity" >
+        </activity>
+        <activity android:name=".activities.HelpActivity" >
+        </activity>
+    </application>
+
+</manifest>

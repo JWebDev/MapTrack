@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:stretchColumns="*" >
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/startActivityStart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="showTravelDescriptionActivity"
+            android:text="@string/startActivityStart" />
+
+        <Button
+            android:id="@+id/startActivityAktuelleReise"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/startActivityAktuelleReise" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/startActivityHistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/startActivityHistory" />
+
+        <Button
+            android:id="@+id/startActivityHilfe"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/startActivityHilfe" />
+
+    </TableRow>
+
+</TableLayout>

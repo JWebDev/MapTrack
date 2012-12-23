@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MapTrack</string>
+    <string name="menu_settings">Settings</string>
+    <string name="splashScreenImage">splashScreenImage</string>
+    <string name="splashScreenPointBlue">splashScreenPointBlue</string>
+    <string name="splashScreenPointYellow">splashScreenPointYellow</string>
+    <string name="splashScreenTextMap">splashScreenTextMap</string>
+    <string name="splashScreenPointRed">splashScreenPointRed</string>
+    <string name="splashScreenTextTrack">splashScreenTextTrack</string>
+    <string name="splashScreenPointMagenta">splashScreenPointMagenta</string>
+    <string name="splashScreenPointGreen">splashScreenPointGreen</string>
+    
+    <string name="startActivityStart">Start</string>
+    <string name="startActivityAktuelleReise">Aktuelle Reise</string>
+    <string name="startActivityHistory">History</string>
+    <string name="startActivityHilfe">Hilfe</string>
+    
+    <string name="travelDescrTravelNameTV"> Reise Name: </string>
+    <string name="travelDescrTravelDescrTV"> Reise Beschreibung: </string>
+    <string name="travelDescrTravelStartBtn">Start</string>
+    
+
+</resources>

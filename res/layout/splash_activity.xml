@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/splashScreenImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/splashScreenImage"
+        android:src="@drawable/splash_screen_map" />
+
+    <ImageView
+        android:id="@+id/splashScreenPointBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/splashScreenTextMap"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/splashScreenPointBlue"
+        android:src="@drawable/splash_screen_point_blau" />
+
+    <ImageView
+        android:id="@+id/splashScreenPointYellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/splashScreenPointGreen"
+        android:layout_alignTop="@+id/splashScreenTextMap"
+        android:contentDescription="@string/splashScreenPointYellow"
+        android:src="@drawable/splash_screen_point_yellow" />
+
+    <ImageView
+        android:id="@+id/splashScreenTextMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/splashScreenPointRed"
+        android:layout_alignRight="@+id/splashScreenPointBlue"
+        android:layout_marginRight="34dp"
+        android:contentDescription="@string/splashScreenTextMap"
+        android:src="@drawable/splash_screen_text_map" />
+
+    <ImageView
+        android:id="@+id/splashScreenPointRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/splashScreenPointMagenta"
+        android:contentDescription="@string/splashScreenPointRed"
+        android:src="@drawable/splash_screen_point_red" />
+
+    <ImageView
+        android:id="@+id/splashScreenTextTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/splashScreenPointBlue"
+        android:layout_below="@+id/splashScreenPointBlue"
+        android:contentDescription="@string/splashScreenPointBlue"
+        android:src="@drawable/splash_screen_text_track" />
+
+    <ImageView
+        android:id="@+id/splashScreenPointMagenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/splashScreenTextTrack"
+        android:layout_alignTop="@+id/splashScreenTextTrack"
+        android:contentDescription="@string/splashScreenPointMagenta"
+        android:src="@drawable/splash_screen_point_magenta" />
+
+    <ImageView
+        android:id="@+id/splashScreenPointGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/splashScreenTextTrack"
+        android:layout_toLeftOf="@+id/splashScreenTextTrack"
+        android:contentDescription="@string/splashScreenPointGreen"
+        android:src="@drawable/splash_screen_point_green" />
+
+</RelativeLayout>
