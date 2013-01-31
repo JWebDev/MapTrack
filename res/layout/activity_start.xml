@@ -19,6 +19,7 @@
             android:id="@+id/startActivityAktuelleReise"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:onClick="showTravelMapActivity"
             android:text="@string/startActivityAktuelleReise" />
 
     </TableRow>
@@ -29,12 +30,14 @@
             android:id="@+id/startActivityHistory"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:onClick="showHistoryActivity"
             android:text="@string/startActivityHistory" />
 
         <Button
             android:id="@+id/startActivityHilfe"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:onClick="showHelpActivity"
             android:text="@string/startActivityHilfe" />
 
     </TableRow>

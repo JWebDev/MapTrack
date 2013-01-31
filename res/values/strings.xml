@@ -21,5 +21,14 @@
     <string name="travelDescrTravelDescrTV"> Reise Beschreibung: </string>
     <string name="travelDescrTravelStartBtn">Start</string>
     
+    <string name="google_maps_api_key">05l5tIQ3rDTGdEEhusYXCPVSQyZPJ9qcScCEa4Q</string>
+    <string name="travelEnd">Die Reise beenden</string>
+    <string name="toast_signal_travel_exists">Die Reise mit solchen Name ist schon vorhanden!</string>
+    <string name="toast_signal_travel_exists_again">Bitte geben Sie die andere Reisename.</string>
+    <string name="toast_signal_travel_empty">Eine oder beide Eingabefelder sind leer.</string>
+    
+   <string name="button_start_tracking">Start Tracking</string>
+   <string name="button_stop_tracking">Stop Tracking</string>
+    
 
 </resources>

@@ -18,4 +18,19 @@ public class StartMenuActivity extends Activity {
         Intent intent = new Intent(this, TravelDescriptionActivity.class);
         startActivity(intent);
     }
+    
+    public void showHistoryActivity(View v){
+        Intent intent = new Intent(this, HistoryActivity.class);
+        startActivity(intent);
+    }
+    
+    public void showTravelMapActivity(View v){
+        Intent intent = new Intent(this, TravelMapActivity.class);
+        startActivity(intent);
+    }
+    
+    public void showHelpActivity(View v){
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
+    }
 }
