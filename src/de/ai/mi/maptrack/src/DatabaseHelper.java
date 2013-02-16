@@ -40,8 +40,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public void clearDb() {
 		SQLiteDatabase db = this.getWritableDatabase();
 		Log.d(LOG_TAG, "--- Clear mytable: ---");
-		int clearCount = db.delete("mytable", null, null);
-		Log.d(LOG_TAG, "deleted rows count = " + clearCount);
+		int clearCountFromTravels = db.delete("travels", null, null);
+		int clearCountFromRoutes = db.delete("routes", null, null);
+		int clearCountFromPois = db.delete("pois", null, null);
+		Log.d(LOG_TAG, "deleted rows count from clearCountFromTravels = " + clearCountFromTravels);
+		Log.d(LOG_TAG, "deleted rows count from clearCountFromRoutes = " + clearCountFromRoutes);
+		Log.d(LOG_TAG, "deleted rows count from clearCountFromPois = " + clearCountFromPois);
 		db.close();
 	}
 	
