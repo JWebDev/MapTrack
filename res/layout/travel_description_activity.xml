@@ -21,7 +21,8 @@
             android:id="@+id/travelNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10" />
+            android:ems="10"
+            android:hint="@string/travelDescrTravelNameTV" />
     </LinearLayout>
 
     <LinearLayout
@@ -40,7 +41,8 @@
             android:id="@+id/travelDescriptionEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:ems="10" >
+            android:ems="10"
+            android:hint="@string/travelDescrTravelDescrTV" >
 
             <requestFocus />
         </EditText>
@@ -58,7 +60,6 @@
             android:layout_height="wrap_content"
             android:onClick="showTravelMapActivity"
             android:text="@string/travelDescrTravelStartBtn" />
-
     </LinearLayout>
 
 </LinearLayout>

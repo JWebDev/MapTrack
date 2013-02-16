@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/travel_map_menu_add_textPoi"
+        android:title="@string/travel_map_menu_add_textPoi_str">
+    </item>
+    <item
+        android:id="@+id/travel_map_menu_add_picturePoi"
+        android:title="@string/travel_map_menu_add_picturePoi_str">
+    </item>
+    <item
+        android:id="@+id/travel_map_menu_add_videoPoi"
+        android:title="@string/travel_map_menu_add_videoPoi_str">
+    </item>
+        <item
+        android:id="@+id/travel_map_menu_info"
+        android:title="@string/travel_map_menu_info_str">
+    </item>
+
+</menu>

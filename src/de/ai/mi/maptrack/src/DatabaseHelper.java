@@ -7,9 +7,9 @@ import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 	
-	final String LOG_TAG = "myLogs";
+	private final String LOG_TAG = "DB_HELPER";
 	private static DatabaseHelper mInstance = null;
-	private static String DATABASE_NAME = "MapTrackTestDB";
+	private static String DATABASE_NAME = "MapTrackDB";
 
 	public static DatabaseHelper getInstance(Context context) {
 		if (mInstance == null) {
@@ -19,20 +19,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	}
 
 	private DatabaseHelper(Context context) {
+//		super(new DatabaseContext(context), DATABASE_NAME, null, 1);
 		super(context, DATABASE_NAME, null, 1);
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		Log.d(LOG_TAG, "--- onCreate database ---");
-		db.execSQL("create table mytable (" + "id integer primary key autoincrement," + "name text," + "description text" + "temp text" + ");");
+		db.execSQL("create table travels (" + "id integer primary key autoincrement," + "travelName varchar," + "travelDescription text" + ");");
+		db.execSQL("create table routes (" + "id integer primary key autoincrement," + "travelName varchar," + "nummer integer," + "latitude double," + "longitude double" + ");");
+		db.execSQL("create table pois (" + "id integer primary key autoincrement," + "travelName varchar," + "latitude double," + "longitude double,"  + "poiName varchar," + "poiDescription text," + "markerTyp character," + "pathToImageOrVideo varchar"+ ");");
 
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub
 
 	}
+	
+	public void clearDb() {
+		SQLiteDatabase db = this.getWritableDatabase();
+		Log.d(LOG_TAG, "--- Clear mytable: ---");
+		int clearCount = db.delete("mytable", null, null);
+		Log.d(LOG_TAG, "deleted rows count = " + clearCount);
+		db.close();
+	}
+	
 }
 

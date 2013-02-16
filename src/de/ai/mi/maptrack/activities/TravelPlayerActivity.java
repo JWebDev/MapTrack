@@ -5,7 +5,6 @@ import com.google.android.maps.MapView;
 
 import de.ai.mi.maptrack.R;
 import de.ai.mi.maptrack.src.MapFrameLayout;
-import de.ai.mi.maptrack.src.RouteOverlay;
 import android.app.Activity;
 import android.location.Location;
 import android.location.LocationManager;
@@ -18,7 +17,6 @@ public class TravelPlayerActivity extends Activity {
 	private LocationManager locationManager;
 	private MapController mapController;
 	private Location prevLocation;
-	private RouteOverlay routeOverlay;
 	private long distanceTraveled;
 	private MapFrameLayout mapFrameLayout;
 	private boolean tracking;

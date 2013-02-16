@@ -21,7 +21,6 @@
     <string name="travelDescrTravelDescrTV"> Reise Beschreibung: </string>
     <string name="travelDescrTravelStartBtn">Start</string>
     
-    <string name="google_maps_api_key">05l5tIQ3rDTGdEEhusYXCPVSQyZPJ9qcScCEa4Q</string>
     <string name="travelEnd">Die Reise beenden</string>
     <string name="toast_signal_travel_exists">Die Reise mit solchen Name ist schon vorhanden!</string>
     <string name="toast_signal_travel_exists_again">Bitte geben Sie die andere Reisename.</string>
@@ -29,6 +28,28 @@
     
    <string name="button_start_tracking">Start Tracking</string>
    <string name="button_stop_tracking">Stop Tracking</string>
-    
+   
+   <string name="alert_gps_settings_title">GPS is settings</string>
+   <string name="alert_gps_settings_message">GPS is not enabled. Do you want to go to settings menu?</string>
+   <string name="button_gps_settings_positive">Settings</string>
+   <string name="button_gps_settings_negative">Cancel</string>
+   
+   <string name="travel_map_menu_add_textPoi_str">Text POI</string>
+   <string name="travel_map_menu_add_picturePoi_str">Bild POI</string>
+   <string name="travel_map_menu_add_videoPoi_str">Video POI</string>
+   <string name="travel_map_menu_info_str">Info</string>
+   
+   <string name="button_travel_start">Start</string>
+   <string name="button_travel_stop">Stop</string>
+   
+   <string name="button_ok">Ok</string>
+   <string name="button_cancel">Cancel</string>
+   
+   <string name="poi_name_hint">POI Name</string>
+   <string name="poi_descr_hint">POI Description</string>
+   <string name="poi_travel_start">Start of</string>
+   <string name="poi_travel_end">End of</string>
+   
+      <string name="poi_add_error">Poi ADD ERRORR!</string>
 
 </resources>
