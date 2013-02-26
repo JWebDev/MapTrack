@@ -56,7 +56,6 @@
    <string name="button_player_forwards">>>></string>
    <string name="button_player_backwards">&lt;&lt;&lt;</string>
    
-   <string name="poi_add_error">Poi ADD ERRORR!</string>
-   <string name="isNoActiveTravel">Es gibt kein aktuelle Reise!</string>
+      <string name="poi_add_error">Poi ADD ERRORR!</string>
 
 </resources>

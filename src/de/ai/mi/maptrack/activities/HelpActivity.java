@@ -15,7 +15,9 @@ public class HelpActivity extends Activity {
 		setContentView(R.layout.help_web_view_activity);
 	    webView = (WebView) findViewById(R.id.help_webview);
 	    webView.getSettings().setJavaScriptEnabled(true);
-	    webView.loadUrl("http://j-web-dev.blogspot.com"); 
+	    webView.loadUrl("https://studi.f4.htw-berlin.de/~s0531597/maptrackHelp.html"); 
+	    
+	    
 	    
 	}
 

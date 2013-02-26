@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import de.ai.mi.maptrack.R;
@@ -17,11 +18,11 @@ import de.ai.mi.maptrack.src.DatabaseHelper;
 
 public class TravelDescriptionActivity extends Activity {
 
-	final String LOG_TAG = "myLogs: ";
+	final String LOG_TAG = "TRAVEL_DESCRIPTION: ";
 
 	private String travelDirNameValue;
-	private String travelNameValue;
-	private String travelDescriptionValue;
+	private EditText travelName, travelDescription;
+	private Button startButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +32,8 @@ public class TravelDescriptionActivity extends Activity {
 
 	public void showTravelMapActivity(View v) {
 
-		// // потым витерти
-		// Intent intent = new Intent(this, TravelMapActivity.class);
-		// createTravelDir();
-		// intent.putExtra("travelDirName", travelNameValue);
-		// startActivity(intent);
+		startButton = (Button) findViewById(R.id.travelStartButton);
 
-		// Работает
 		int isTravelExistsOrEmpty = isTravelExistsOrEmpty();
 
 		if (isTravelExistsOrEmpty == 2) {
@@ -49,14 +45,14 @@ public class TravelDescriptionActivity extends Activity {
 			createTravelDir();
 			Intent intent = new Intent(this, TravelMapActivity.class);
 			intent.putExtra("travelDirName", travelDirNameValue);
-			intent.putExtra("travelName", travelNameValue);
-			intent.putExtra("travelDescription", travelDescriptionValue);
+			intent.putExtra("travelName", travelName.getText().toString());
+			intent.putExtra("travelDescription", travelDescription.getText().toString());
 			startActivity(intent);
 		}
 	}
 
 	private int isTravelExistsOrEmpty() {
-		EditText travelName, travelDescription;
+
 		travelName = (EditText) findViewById(R.id.travelNameEditText);
 		travelDescription = (EditText) findViewById(R.id.travelDescriptionEditText);
 
@@ -65,19 +61,16 @@ public class TravelDescriptionActivity extends Activity {
 		Cursor cursor = db.rawQuery("SELECT * from travels where travelName=\"" + travelName.getText().toString() + "\"", null);
 		if (!travelName.getText().toString().equals("") && !travelDescription.getText().toString().equals("")) {
 			if (!cursor.moveToFirst()) {
+				chekTravelNameLength(travelName.getText().toString());
+
 				contentValues.put("travelName", travelName.getText().toString());
 				contentValues.put("travelDescription", travelDescription.getText().toString());
-				
-				this.travelNameValue = travelName.getText().toString();
-				this.travelDescriptionValue = travelDescription.getText().toString();
-				
-				travelName.setText("");
-				travelDescription.setText("");
-				
+				contentValues.put("travelDirName", travelDirNameValue);
+
 				db.insert("travels", null, contentValues);
 				cursor.close();
 				db.close();
-				chekTravelNameLength(travelName.getText().toString());
+				startButton.setEnabled(false);
 				return 0;
 			} else {
 				return 2;
@@ -99,11 +92,21 @@ public class TravelDescriptionActivity extends Activity {
 			this.travelDirNameValue = travelNameValue;
 		}
 	}
-	
+
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
+		if (startButton != null) {
+			startButton.setEnabled(true);
+		}
 	}
 
+	@Override
+	protected void onStop() {
+		super.onStop();
+		if (travelName != null && travelDescription != null) {
+			travelName.setText("");
+			travelDescription.setText("");
+		}
+	}
 }

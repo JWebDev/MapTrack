@@ -2,7 +2,7 @@ package de.ai.mi.maptrack.src;
 
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class PoiObject {
+public class PoiObject{
 
 	private MarkerOptions markerOptions;
 	private String markerTyp;
@@ -13,6 +13,10 @@ public class PoiObject {
 		this.markerTyp = markerTyp;
 		this.pathToImageOrVideo = pathToImageOrVideo;
 	}
+	
+	public PoiObject() {
+		
+	}
 
 	public MarkerOptions getMarkerOptions() {
 		return markerOptions;
@@ -22,8 +26,20 @@ public class PoiObject {
 		return markerTyp;
 	}
 
-	public String getMarkerLink() {
+	public String getPathToImageOrVideo() {
 		return pathToImageOrVideo;
+	}
+
+	public void setPathToImageOrVideo(String pathToImageOrVideo) {
+		this.pathToImageOrVideo = pathToImageOrVideo;
+	}
+
+	public void setMarkerOptions(MarkerOptions markerOptions) {
+		this.markerOptions = markerOptions;
+	}
+
+	public void setMarkerTyp(String markerTyp) {
+		this.markerTyp = markerTyp;
 	}
 
 }

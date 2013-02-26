@@ -26,7 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		Log.d(LOG_TAG, "--- onCreate database ---");
-		db.execSQL("create table travels (" + "id integer primary key autoincrement," + "travelName varchar," + "travelDescription text" + ");");
+		db.execSQL("create table travels (" + "id integer primary key autoincrement," + "travelName varchar," + "travelDescription text," + "travelDirName varchar," + "isActive boolean"+ ");");
 		db.execSQL("create table routes (" + "id integer primary key autoincrement," + "travelName varchar," + "nummer integer," + "latitude double," + "longitude double" + ");");
 		db.execSQL("create table pois (" + "id integer primary key autoincrement," + "travelName varchar," + "latitude double," + "longitude double,"  + "poiName varchar," + "poiDescription text," + "markerTyp character," + "pathToImageOrVideo varchar"+ ");");
 
@@ -40,12 +40,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public void clearDb() {
 		SQLiteDatabase db = this.getWritableDatabase();
 		Log.d(LOG_TAG, "--- Clear mytable: ---");
-		int clearCountFromTravels = db.delete("travels", null, null);
-		int clearCountFromRoutes = db.delete("routes", null, null);
-		int clearCountFromPois = db.delete("pois", null, null);
-		Log.d(LOG_TAG, "deleted rows count from clearCountFromTravels = " + clearCountFromTravels);
-		Log.d(LOG_TAG, "deleted rows count from clearCountFromRoutes = " + clearCountFromRoutes);
-		Log.d(LOG_TAG, "deleted rows count from clearCountFromPois = " + clearCountFromPois);
+		int clearCount = db.delete("mytable", null, null);
+		Log.d(LOG_TAG, "deleted rows count = " + clearCount);
 		db.close();
 	}
 	

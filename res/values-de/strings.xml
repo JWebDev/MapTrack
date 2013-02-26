@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">MapTrack</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_settings">Einstellungen</string>
     <string name="splashScreenImage">splashScreenImage</string>
     <string name="splashScreenPointBlue">splashScreenPointBlue</string>
     <string name="splashScreenPointYellow">splashScreenPointYellow</string>
@@ -13,29 +13,29 @@
     <string name="splashScreenPointGreen">splashScreenPointGreen</string>
     
     <string name="startActivityStart">Start</string>
-    <string name="startActivityAktuelleReise">Latest travel</string>
+    <string name="startActivityAktuelleReise">Aktuelle Reise</string>
     <string name="startActivityHistory">History</string>
-    <string name="startActivityHilfe">Help</string>
+    <string name="startActivityHilfe">Hilfe</string>
     
-    <string name="travelDescrTravelNameTV"> Travel Name: </string>
-    <string name="travelDescrTravelDescrTV"> Travel description: </string>
+    <string name="travelDescrTravelNameTV"> Reise Name: </string>
+    <string name="travelDescrTravelDescrTV"> Reise Beschreibung: </string>
     <string name="travelDescrTravelStartBtn">Start</string>
     
-    <string name="travelEnd">End travel</string>
-    <string name="toast_signal_travel_exists">The journey with the specified name already exists!</string>
-    <string name="toast_signal_travel_exists_again">Please enter a different name for the trip.</string>
-    <string name="toast_signal_travel_empty">One or both of the fields are empty.</string>
+    <string name="travelEnd">Die Reise beenden</string>
+    <string name="toast_signal_travel_exists">Die Reise mit dem angegebenen Namen ist schon vorhanden!</string>
+    <string name="toast_signal_travel_exists_again">Bitte geben Sie einen anderen Namen für die Reise ein.</string>
+    <string name="toast_signal_travel_empty">Eins oder beide Eingabefelder sind leer.</string>
     
    <string name="button_start_tracking">Start Tracking</string>
    <string name="button_stop_tracking">Stop Tracking</string>
    
-   <string name="alert_gps_settings_title">GPS is settings</string>
-   <string name="alert_gps_settings_message">GPS is not enabled. Do you want to go to settings menu?</string>
-   <string name="button_gps_settings_positive">Settings</string>
-   <string name="button_gps_settings_negative">Cancel</string>
+   <string name="alert_gps_settings_title">GPS iat eingeschaltet</string>
+   <string name="alert_gps_settings_message">GPS ist niecht eingeschaltet. Möchten Sie zu den Einstellungen wechseln?</string>
+   <string name="button_gps_settings_positive">Einstellungen</string>
+   <string name="button_gps_settings_negative">Abbrechen</string>
    
    <string name="travel_map_menu_add_textPoi_str">Text POI</string>
-   <string name="travel_map_menu_add_picturePoi_str">Picture POI</string>
+   <string name="travel_map_menu_add_picturePoi_str">Bild POI</string>
    <string name="travel_map_menu_add_videoPoi_str">Video POI</string>
    <string name="travel_map_menu_info_str">Info</string>
    
@@ -43,12 +43,12 @@
    <string name="button_travel_stop">Stop</string>
    
    <string name="button_ok">Ok</string>
-   <string name="button_cancel">Cancel</string>
+   <string name="button_cancel">Abbrechen</string>
    
    <string name="poi_name_hint">POI Name</string>
-   <string name="poi_descr_hint">POI Description</string>
-   <string name="poi_travel_start">Start of</string>
-   <string name="poi_travel_end">End of</string>
+   <string name="poi_descr_hint">POI Beschreibung</string>
+   <string name="poi_travel_start">Start von</string>
+   <string name="poi_travel_end">Ende von</string>
    
    <string name="button_player_start">Start</string>
    <string name="button_player_pause">Pause</string>
@@ -56,7 +56,6 @@
    <string name="button_player_forwards">>>></string>
    <string name="button_player_backwards">&lt;&lt;&lt;</string>
    
-   <string name="poi_add_error">Poi ADD ERRORR!</string>
-   <string name="isNoActiveTravel">Es gibt kein aktuelle Reise!</string>
+      <string name="poi_add_error">Poi ADD ERRORR!</string>
 
 </resources>

@@ -8,11 +8,13 @@ import java.nio.channels.FileChannel;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 import de.ai.mi.maptrack.R;
 import de.ai.mi.maptrack.src.DatabaseHelper;
 
@@ -20,6 +22,8 @@ public class StartMenuActivity extends Activity {
 
 	public static final String DIR_NAME = "MapTrack";
 	private final String LOG_TAG = "START_ACTIVITY";
+	
+	private String travelName, travelDescription, travelDirName;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +31,8 @@ public class StartMenuActivity extends Activity {
 		setContentView(R.layout.activity_start);
 
 		createDirIfNotExist();
-		//copyDbToSD();
-		removeDb();
+		// copyDbToSD();
+		//removeDb();
 	}
 
 	public void showTravelDescriptionActivity(View v) {
@@ -42,8 +46,17 @@ public class StartMenuActivity extends Activity {
 	}
 
 	public void showTravelMapActivity(View v) {
-		Intent intent = new Intent(this, TravelMapActivity.class);
-		startActivity(intent);
+		boolean isActiveTravel = chekActiveTravel();
+		if (isActiveTravel) {
+			Intent intent = new Intent(this, TravelMapActivity.class);
+			intent.putExtra("isIntentFromMenu", "isIntentFromMenu");
+			intent.putExtra("travelName", travelName);
+			intent.putExtra("travelDescription", travelDescription);
+			intent.putExtra("travelDirName", travelDirName);
+			startActivity(intent);
+		} else {
+			Toast.makeText(this, getResources().getString(R.string.isNoActiveTravel), Toast.LENGTH_LONG).show();
+		}
 	}
 
 	public void showHelpActivity(View v) {
@@ -54,6 +67,22 @@ public class StartMenuActivity extends Activity {
 	private void createDirIfNotExist() {
 		File folder = new File(Environment.getExternalStorageDirectory(), DIR_NAME);
 		folder.mkdirs();
+	}
+
+	private boolean chekActiveTravel() {
+
+		SQLiteDatabase db = DatabaseHelper.getInstance(this).getWritableDatabase();
+		Cursor cursor = db.rawQuery("SELECT * from travels where isActive='1'", null);
+		if (cursor.moveToFirst()) {
+			Log.i(LOG_TAG, cursor.getString(1)+" "+cursor.getString(2)+" "+cursor.getString(3));
+			if (cursor.getString(4).equals("1")) {
+				travelName = cursor.getString(1);
+				travelDescription = cursor.getString(2);
+				travelDirName = cursor.getString(3);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private void removeDb() {
